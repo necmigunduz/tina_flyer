@@ -3,231 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tina Marie - İngilizce Özel Ders İlanı</title>
+    <title>Tina Marie | Professional English Tutor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        
-        @page {
-            size: A4;
-            margin: 0;
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text-dark: #0f172a;
+            --text-light: #475569;
+            --bg-light: #f8fafc;
         }
-        
-        body {
-            font-family: 'Inter', sans-serif;
+
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f8fafc;
-            color: #1e293b;
-            -webkit-print-color-adjust: exact;
         }
 
-        .flyer {
-            width: 210mm;
-            height: 297mm;
-            box-sizing: border-box;
-            padding: 20mm;
-            background: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        .header {
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
             text-align: center;
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 15px;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 24px;
+            margin-bottom: 40px;
         }
 
-        .header h1 {
+        .hero h1 {
+            font-size: 2.5rem;
             color: #1e3a8a;
-            font-size: 28px;
-            margin: 0 0 10px 0;
             font-weight: 700;
+            margin-bottom: 20px;
         }
 
-        .header p {
-            font-size: 18px;
-            color: #64748b;
-            margin: 0;
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .content {
-            display: flex;
-            gap: 30px;
-            margin-top: 30px;
-            align-items: center;
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: start;
         }
 
-        .profile-box {
-            flex: 1;
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
             text-align: center;
-            background: #f1f5f9;
-            padding: 25px;
-            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #3b82f6;
-            margin-bottom: 15px;
+            border: 4px solid var(--primary);
+            margin-bottom: 20px;
         }
 
-        .profile-box h2 {
-            font-size: 22px;
-            margin: 0 0 5px 0;
-            color: #1e293b;
+        .profile-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
         }
 
-        .profile-box .title {
-            font-size: 14px;
-            color: #3b82f6;
+        .profile-card .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .about-text {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #475569;
+        .profile-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
             text-align: justify;
         }
 
-        .features {
-            flex: 1.5;
+        /* Services / Features */
+        .services-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
         }
 
-        .features h3 {
-            font-size: 20px;
+        .services-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
             color: #1e3a8a;
-            margin: 0 0 20px 0;
-            border-left: 4px solid #3b82f6;
-            padding-left: 10px;
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
         }
 
-        .feature-item {
-            margin-bottom: 15px;
+        .service-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f1f5f9;
         }
 
-        .feature-item strong {
-            color: #0f172a;
-            font-size: 15px;
-            display: block;
-            margin-bottom: 2px;
+        .service-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
-        .feature-item p {
-            margin: 0;
-            font-size: 14px;
-            color: #475569;
+        .service-item h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .offer-box {
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-            border: 1px dashed #3b82f6;
-            padding: 20px;
-            border-radius: 12px;
+        .service-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Call To Action Box */
+        .cta-box {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
             text-align: center;
             margin-top: 20px;
         }
 
-        .offer-box p {
-            margin: 0;
-            font-size: 16px;
-            color: #1e40af;
-            font-weight: 600;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 15px;
+        .cta-box h3 {
+            font-size: 1.8rem;
             margin-bottom: 10px;
         }
 
-        .footer p {
-            margin: 0;
-            font-size: 13px;
-            color: #64748b;
+        .cta-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
         }
 
-        @media print {
-            body {
-                background: none;
-            }
-            .flyer {
-                box-shadow: none;
-            }
+        .btn {
+            display: inline-block;
+            background: #34d399;
+            color: #064e3b;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #059669;
+            color: white;
         }
     </style>
 </head>
 <body>
 
-<div class="flyer">
-    <div class="header">
+<div class="container">
+    <header class="hero">
         <h1>Küresel Kariyeriniz ve Eğitiminiz İçin İngilizce Bariyerini Aşın! 🌍</h1>
-        <p>Teknik Profesyoneller ve Akademik Hedefi Olan Öğrenciler İçin Nokta Atışı Programlar</p>
-    </div>
+        <p>Teknik profesyoneller, yazılımcılar ve akademik hedefi olan öğrenciler için tamamen kişiselleştirilmiş nokta atışı programlar.</p>
+    </header>
 
-    <div class="content">
-        <div class="profile-box">
+    <main class="main-grid">
+        <section class="profile-card">
             <img src="Tina.jpeg" alt="Tina Marie" class="profile-img">
             <h2>Tina Marie</h2>
-            <div class="title">Native Speaker & Tutor</div>
-            <p class="about-text">
+            <span class="tag">Native Speaker & Tutor</span>
+            <p>
                 Amerika (Louisiana) doğumluyum. Biyomedikal Mühendisliği lisans geçmişim, Cambridge onaylı CELTA sertifikam ve 10 yılı aşkın uluslararası tecrübemle İngilizceyi kariyeriniz için güçlü bir araca dönüştürüyorum. Sizinle aynı analitik dili konuşuyorum!
             </p>
-        </div>
+        </section>
 
-        <div class="features">
+        <section class="services-box">
             <h3>🎯 Neler Vadediyorum?</h3>
             
-            <div class="feature-item">
-                <strong>💻 Yazılımcı & Teknik Çalışanlar İçin:</strong>
+            <div class="service-item">
+                <h4>💻 Yazılımcı & Teknik Çalışanlar</h4>
                 <p>Teknik mülakatlar (Technical Interviews) ve global ekiplerle yapılan Daily/Sprint toplantılarına özel pratikler.</p>
             </div>
 
-            <div class="feature-item">
-                <strong>🎓 Akademik Hazırlık:</strong>
+            <div class="service-item">
+                <h4>🎓 Akademik Hazırlık</h4>
                 <p>Yurt dışı eğitim öncesi sunum teknikleri, essay yazım mantığı ve TOEFL/IELTS hazırlığı.</p>
             </div>
 
-            <div class="feature-item">
-                <strong>🇺🇸 Doğal Amerikan Aksanı:</strong>
+            <div class="service-item">
+                <h4>🇺🇸 Doğal Amerikan Aksanı</h4>
                 <p>Gerçek aksan pratiği ve kulak aşinalığı ile konuşma özgüveninizi en üst seviyeye çıkarma.</p>
             </div>
 
-            <div class="feature-item">
-                <strong>📅 Esnek ve Online:</strong>
-                <p>Yoğun çalışma ve sprint temponuza tam uyum sağlayan online birebir dersler.</p>
+            <div class="service-item">
+                <h4>📅 Esnek ve Online Konfor</h4>
+                <p>Yoğun çalışma ve sprint temponuza tam uyum sağlayan online birebir veya grup dersleri.</p>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="offer-box">
-        <p>🎁 Sistem Testi Tadında! Birbirimizin çalışma metodunu görmemiz için ilk tanışma dersimiz ÜCRETSİZ! 🎉</p>
-    </div>
-
-    <div class="footer">
-        <a href="https://ankara.ozelders.com/ders-veren/tina-marie-j-671198" class="cta-btn">Profilimi İnceleyin & Ders Talebi Oluşturun</a>
-        <p>ankara.ozelders.com/ders-veren/tina-marie-j-671198</p>
-    </div>
+        <section class="cta-box">
+            <h3>🎁 Sistem Testi Tadında!</h3>
+            <p>Birbirimizin çalışma metodunu ve enerjisini görmemiz için ilk tanışma dersimiz tamamen ücretsiz.</p>
+            <a href="https://ankara.ozelders.com/ders-veren/tina-marie-j-671198" target="_blank" class="btn">Profilimi İnceleyin & Ders Talebi Oluşturun</a>
+        </section>
+    </main>
 </div>
 
 </body>
