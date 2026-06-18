@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tina Marie - İngilizce Özel Ders İlanı</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #1e293b;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .flyer {
+            width: 210mm;
+            height: 297mm;
+            box-sizing: border-box;
+            padding: 20mm;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 15px;
+        }
+
+        .header h1 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .profile-box {
+            flex: 1;
+            text-align: center;
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 16px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3b82f6;
+            margin-bottom: 15px;
+        }
+
+        .profile-box h2 {
+            font-size: 22px;
+            margin: 0 0 5px 0;
+            color: #1e293b;
+        }
+
+        .profile-box .title {
+            font-size: 14px;
+            color: #3b82f6;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .about-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #475569;
+            text-align: justify;
+        }
+
+        .features {
+            flex: 1.5;
+        }
+
+        .features h3 {
+            font-size: 20px;
+            color: #1e3a8a;
+            margin: 0 0 20px 0;
+            border-left: 4px solid #3b82f6;
+            padding-left: 10px;
+        }
+
+        .feature-item {
+            margin-bottom: 15px;
+        }
+
+        .feature-item strong {
+            color: #0f172a;
+            font-size: 15px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .feature-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .offer-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px dashed #3b82f6;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .offer-box p {
+            margin: 0;
+            font-size: 16px;
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+            .flyer {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="flyer">
+    <div class="header">
+        <h1>Küresel Kariyeriniz ve Eğitiminiz İçin İngilizce Bariyerini Aşın! 🌍</h1>
+        <p>Teknik Profesyoneller ve Akademik Hedefi Olan Öğrenciler İçin Nokta Atışı Programlar</p>
+    </div>
+
+    <div class="content">
+        <div class="profile-box">
+            <img src="Tina.jpeg" alt="Tina Marie" class="profile-img">
+            <h2>Tina Marie</h2>
+            <div class="title">Native Speaker & Tutor</div>
+            <p class="about-text">
+                Amerika (Louisiana) doğumluyum. Biyomedikal Mühendisliği lisans geçmişim, Cambridge onaylı CELTA sertifikam ve 10 yılı aşkın uluslararası tecrübemle İngilizceyi kariyeriniz için güçlü bir araca dönüştürüyorum. Sizinle aynı analitik dili konuşuyorum!
+            </p>
+        </div>
+
+        <div class="features">
+            <h3>🎯 Neler Vadediyorum?</h3>
+            
+            <div class="feature-item">
+                <strong>💻 Yazılımcı & Teknik Çalışanlar İçin:</strong>
+                <p>Teknik mülakatlar (Technical Interviews) ve global ekiplerle yapılan Daily/Sprint toplantılarına özel pratikler.</p>
+            </div>
+
+            <div class="feature-item">
+                <strong>🎓 Akademik Hazırlık:</strong>
+                <p>Yurt dışı eğitim öncesi sunum teknikleri, essay yazım mantığı ve TOEFL/IELTS hazırlığı.</p>
+            </div>
+
+            <div class="feature-item">
+                <strong>🇺🇸 Doğal Amerikan Aksanı:</strong>
+                <p>Gerçek aksan pratiği ve kulak aşinalığı ile konuşma özgüveninizi en üst seviyeye çıkarma.</p>
+            </div>
+
+            <div class="feature-item">
+                <strong>📅 Esnek ve Online:</strong>
+                <p>Yoğun çalışma ve sprint temponuza tam uyum sağlayan online birebir dersler.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="offer-box">
+        <p>🎁 Sistem Testi Tadında! Birbirimizin çalışma metodunu görmemiz için ilk tanışma dersimiz ÜCRETSİZ! 🎉</p>
+    </div>
+
+    <div class="footer">
+        <a href="https://ankara.ozelders.com/ders-veren/tina-marie-j-671198" class="cta-btn">Profilimi İnceleyin & Ders Talebi Oluşturun</a>
+        <p>ankara.ozelders.com/ders-veren/tina-marie-j-671198</p>
+    </div>
+</div>
+
+</body>
+</html>
