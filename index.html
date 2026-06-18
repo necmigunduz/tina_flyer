@@ -62,6 +62,7 @@
             grid-template-columns: 1fr 1.5fr;
             gap: 40px;
             align-items: start;
+            margin-bottom: 40px;
         }
 
         @media (max-width: 768px) {
@@ -79,7 +80,7 @@
             padding: 30px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
         }
 
         .profile-img {
@@ -118,7 +119,7 @@
             background: white;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
         }
 
         .services-box h3 {
@@ -155,15 +156,49 @@
             color: var(--text-light);
         }
 
+        /* Video Section */
+        .video-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .video-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 12px;
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         /* Call To Action Box */
         .cta-box {
-            grid-column: 1 / -1;
             background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white;
             padding: 40px;
             border-radius: 24px;
             text-align: center;
-            margin-top: 20px;
         }
 
         .cta-box h3 {
@@ -202,7 +237,7 @@
 <div class="container">
     <header class="hero">
         <h1>Küresel Kariyeriniz ve Eğitiminiz İçin İngilizce Bariyerini Aşın! 🌍</h1>
-        <p>Teknik profesyoneller, yazılımcılar ve akademik hedefi olan öğrenciler için tamamen kişiselleştirilmiş nokta atışı programlar.</p>
+        <p>Mühendisler, teknik profesyoneller ve akademik hedefi olan öğrenciler için tamamen kişiselleştirilmiş nokta atışı programlar.</p>
     </header>
 
     <main class="main-grid">
@@ -219,32 +254,39 @@
             <h3>🎯 Neler Vadediyorum?</h3>
             
             <div class="service-item">
-                <h4>💻 Yazılımcı & Teknik Çalışanlar</h4>
-                <p>Teknik mülakatlar (Technical Interviews) ve global ekiplerle yapılan Daily/Sprint toplantılarına özel pratikler.</p>
+                <h4>🛠️ Mühendisler & Teknik Profesyoneller</h4>
+                <p>Teknik mülakatlar (Technical Interviews), uluslararası projeler ve global iş toplantılarına özel akıcı konuşma pratikleri.</p>
             </div>
 
             <div class="service-item">
                 <h4>🎓 Akademik Hazırlık</h4>
-                <p>Yurt dışı eğitim öncesi sunum teknikleri, essay yazım mantığı ve TOEFL/IELTS hazırlığı.</p>
+                <p>Yurt dışı eğitim ve üniversite süreçleri öncesi sunum teknikleri, akademik essay yazım mantığı ve TOEFL/IELTS hazırlığı.</p>
             </div>
 
             <div class="service-item">
                 <h4>🇺🇸 Doğal Amerikan Aksanı</h4>
-                <p>Gerçek aksan pratiği ve kulak aşinalığı ile konuşma özgüveninizi en üst seviyeye çıkarma.</p>
+                <p>Gerçek aksan pratiği ve kulak aşinalığı ile yabancı dil konuşma özgüveninizi en üst seviyeye çıkarma.</p>
             </div>
 
             <div class="service-item">
                 <h4>📅 Esnek ve Online Konfor</h4>
-                <p>Yoğun çalışma ve sprint temponuza tam uyum sağlayan online birebir veya grup dersleri.</p>
+                <p>Yoğun çalışma veya okul temponuza tam uyum sağlayan online birebir veya grup dersleri.</p>
             </div>
         </section>
-
-        <section class="cta-box">
-            <h3>🎁 Sistem Testi Tadında!</h3>
-            <p>Birbirimizin çalışma metodunu ve enerjisini görmemiz için ilk tanışma dersimiz tamamen ücretsiz.</p>
-            <a href="https://ankara.ozelders.com/ders-veren/tina-marie-j-671198" target="_blank" class="btn">Profilimi İnceleyin & Ders Talebi Oluşturun</a>
-        </section>
     </main>
+
+    <section class="video-section">
+        <h3>📹 Beni Yakından Tanıyın</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tina Marie - Introduction" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="cta-box">
+        <h3>🎁 Sistem Testi Tadında!</h3>
+        <p>Birbirimizin çalışma metodunu ve enerjisini görmemiz için ilk tanışma dersimiz tamamen ücretsiz.</p>
+        <a href="https://ankara.ozelders.com/ders-veren/tina-marie-j-671198" target="_blank" class="btn">Profilimi İnceleyin & Ders Talebi Oluşturun</a>
+    </section>
 </div>
 
 </body>
